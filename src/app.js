@@ -45,7 +45,7 @@ app.get('/weather',(request,response)=>{
 //    response.send('[{"name":"Arunkumar","age":34},{"name":"Reshma","age":30}]')
     if(!request.query.lat || !request.query.long){
         response.send({
-           error:'require valid LAT and LONG parameters in the URL for request' 
+           error:'require valid LAT and LONG parameters for request' 
         })
     }else{
         //function calling from weatherDetails and parameters are passing from request
