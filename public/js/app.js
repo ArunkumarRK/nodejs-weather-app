@@ -18,7 +18,7 @@ const message3=document.querySelector('#message-3')
 //Note::
 //Fetch API work witg Promises concept of JS
 const getWeather=(lat,long)=>{
-    fetch('http://localhost:3000/weather?lat='+ lat +'&long='+ long)
+    fetch('/weather?lat='+ lat +'&long='+ long)
     .then((response)=>{
         response.json().then((data)=>{
             if(data.error){

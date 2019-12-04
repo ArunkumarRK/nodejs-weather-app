@@ -4,6 +4,7 @@ const hbs = require('hbs')
 const weatherDet=require('./utils/weatherDetails')
 
 const app=express()
+const port=process.env.PORT || 3000
 //Define the path for Express config
 const publicDirectoryPath=path.join(__dirname,'../public')
 const viewPath=path.join(__dirname,'../templates/views')
@@ -99,6 +100,6 @@ app.get('*',(request,response)=>{
         errorMessage:'Page Not Found'
     })
 })
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('Web server initiated on the port 3000')
 })
