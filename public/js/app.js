@@ -31,7 +31,7 @@ const getWeather=(lat,long)=>{
                
                 console.log(data[0].sunrisetime)
                 //const dataJson=JSON.parse(data)
-                message1.textContent='Today Summary::'+data[0].totay_summary
+                message1.textContent='Time Zone::'+data[0].timezone
                 message2.textContent='Today Summary::'+data[0].totay_summary
                 message3.textContent='Temperature::'+data[0].temperature
                 message4.textContent='Climate::'+data[0].precipType
