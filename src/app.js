@@ -57,12 +57,16 @@ app.get('/weather',(request,response)=>{
                     error:'require valid LAT and LONG parameters  for request' 
                  })
             }else{
+                console.log(daily.data[1].moonPhase)
                 response.send([{
                     lat:request.query.lat,
                     long:request.query.long,
                     totay_summary:daily.summary,
                     temperature:currently.temperature,
-                    precipType:currently.precipType
+                    precipType:currently.precipType,
+                    sunrisetime:daily.data[1].sunriseTime,
+                    sunsettime:daily.data[1].sunsetTime,
+                    moonphase:daily.data[1].moonPhase
                 }])
             }
         })
