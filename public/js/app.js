@@ -10,6 +10,7 @@ const message3=document.querySelector('#message-3')
 const message4=document.querySelector('#message-4')
 const message5=document.querySelector('#message-5')
 const message6=document.querySelector('#message-6')
+const message7=document.querySelector('#message-7')
 
 // fetch('http://puzzle.mead.io/puzzle').then((response)=>{
 //     response.json().then((data)=>{
@@ -31,11 +32,12 @@ const getWeather=(lat,long)=>{
                 console.log(data[0].sunrisetime)
                 //const dataJson=JSON.parse(data)
                 message1.textContent='Today Summary::'+data[0].totay_summary
-                message2.textContent='Temperature::'+data[0].temperature
-                message3.textContent='Climate::'+data[0].precipType
-                message4.textContent='Sun Rise Time::'+data[0].sunrisetime
-                message5.textContent='Sun Set Time::'+data[0].sunsettime
-                message6.textContent='Moon Phase::'+data[0].moonphase
+                message2.textContent='Today Summary::'+data[0].totay_summary
+                message3.textContent='Temperature::'+data[0].temperature
+                message4.textContent='Climate::'+data[0].precipType
+                message5.textContent='Sun Rise Time::'+data[0].sunrisetime
+                message6.textContent='Sun Set Time::'+data[0].sunsettime
+                message7.textContent='Moon Phase::'+data[0].moonphase
             }
         })
     })

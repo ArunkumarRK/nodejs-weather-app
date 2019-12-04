@@ -51,7 +51,7 @@ app.get('/weather',(request,response)=>{
     }else{
         //function calling from weatherDetails and parameters are passing from request
         const {lat,long}=request.query
-        weatherDet.getWeatherForcast(lat,long,(error,{daily,currently}={})=>{
+        weatherDet.getWeatherForcast(lat,long,(error,{timezone,daily,currently}={})=>{
             if(error){
                 response.send({
                     error:'require valid LAT and LONG parameters  for request' 
@@ -61,6 +61,7 @@ app.get('/weather',(request,response)=>{
                 response.send([{
                     lat:request.query.lat,
                     long:request.query.long,
+                    timezone:timezone,
                     totay_summary:daily.summary,
                     temperature:currently.temperature,
                     precipType:currently.precipType,
